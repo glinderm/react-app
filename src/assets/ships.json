@@ -1,0 +1,102 @@
+[
+    {
+        "id": "c1",
+        "kind": "carrier",
+        "position": [[null,null], [null,null], [null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 5,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": true
+    },
+    {
+        "id": "b1",
+        "kind": "battleship",
+        "position": [[null,null], [null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 4,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": true
+    },
+    {
+        "id": "d1",
+        "kind": "destroyer",
+        "position": [[null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 3,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": true
+    },
+    {
+        "id": "s1",
+        "kind": "submarine",
+        "position": [[null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 3,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": true
+    },
+    {
+        "id": "p1",
+        "kind": "patrol",
+        "position": [[null,null], [null,null]],
+        "orient": "N",
+        "health": 2,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": true
+    },
+    {
+        "id": "c2",
+        "kind": "carrier",
+        "position": [[null,null], [null,null], [null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 5,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": false
+    },
+    {
+        "id": "b2",
+        "kind": "battleship",
+        "position": [[null,null], [null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 4,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": false
+    },
+    {
+        "id": "d2",
+        "kind": "destroyer",
+        "position": [[null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 3,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": false
+    },
+    {
+        "id": "s2",
+        "kind": "submarine",
+        "position": [[null,null], [null,null], [null,null]],
+        "orient": "N",
+        "health": 3,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": false
+    },
+    {
+        "id": "p2",
+        "kind": "patrol",
+        "position": [[null,null], [null,null]],
+        "orient": "N",
+        "health": 2,
+        "damage": 0,
+        "sunk": false,
+        "playerShip": false
+    }
+]
