@@ -1,5 +1,5 @@
-import { Button, Col} from 'react-bootstrap';
+import { Button, Col, Row} from 'react-bootstrap';
 
 export function Game(): JSX.Element {
-    return <div>Game</div>
+    return <Button>Game</Button>
 }

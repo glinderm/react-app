@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 /*
-function Square (props) {
+function Square (props : any) {
   return (
   <button className="square" onClick={() => props.onClick()}>
       {props.value}
@@ -13,8 +13,8 @@ function Square (props) {
   );
 }
 
-class Board extends React.Component<{props: any[]}, {}> {
-  renderSquare(i : string | null) {
+class BshipBoard extends React.Component<{props: any[]}, {}> {
+  renderSquare(i : string | null, squares: any) {
     return (
       <Square
           value={this.props.squares[i]} 
@@ -151,7 +151,7 @@ class Board extends React.Component<{props: any[]}, {}> {
   }
 }
 
-class Game extends React.Component {
+class BshipGame extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -163,7 +163,7 @@ class Game extends React.Component {
       };
   }
 
-  handleClick(i : number) {
+  handleClick(i : any) {
       const history = this.state.history.slice(0, this.state.stepNumber + 1);
       const current = history[history.length-1];
       const squares = current.squares.slice();
@@ -213,7 +213,7 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-board">
-          <Board 
+          <BshipBoard 
               squares={current.squares}
               onClick={(i) => this.handleClick(i)}
           />
@@ -230,7 +230,7 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-  <Game />,
+  <BshipGame />,
   document.getElementById('root')
 );
 
@@ -242,7 +242,7 @@ ReactDOM.render(
 );
 
 
-function calculateWinner(squares) {
+function calculateWinner(squares : any) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
