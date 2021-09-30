@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
+/*
 function Square (props) {
   return (
   <button className="square" onClick={() => props.onClick()}>
@@ -233,14 +233,14 @@ ReactDOM.render(
   <Game />,
   document.getElementById('root')
 );
-/*
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-*/
+
 
 function calculateWinner(squares) {
   const lines = [
@@ -266,3 +266,4 @@ function calculateWinner(squares) {
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+*/
