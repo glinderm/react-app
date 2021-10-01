@@ -8,6 +8,11 @@ export function isBoardFull(squares) {
     return true;
 }
 
+export function cpuGuess() {
+  const guess = Math.floor(Math.random()*100);
+  return guess;
+}
+
 export function calculateWinner(hp, subCount) {
   if (hp === 0) {
     return "You lose!";
@@ -32,7 +37,7 @@ export function Restart({ onClick }) {
 
     return (
       <button className="restart" onClick={onClick}>
-        Play again
+        Shake!
       </button>
     );
 }
