@@ -4,7 +4,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 import SHIPS from './assets/ships.json';
 import { Board } from './components/Board';
 import { Square } from './components/Square';
-import { Ship } from './interfaces/ship';
+//import { Ship } from './interfaces/ship';
 
 
 function App() : JSX.Element {
