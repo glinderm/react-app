@@ -1,10 +1,10 @@
 export interface Ship {
-    id: string
+    id: number
     kind: string
     position: number[][] | null[][]
     orient: string
-    health: number
-    damage: number
+    size: number
+    hits: number
     sunk: boolean
     playerShip: boolean
 }
