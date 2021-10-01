@@ -1,3 +1,5 @@
+import {Ship} from '../interfaces/ship';
+
 export const labels = {
     0: null,
     1: 'A',
@@ -11,3 +13,15 @@ export const labels = {
     9: 'I',
     10: 'J'
 }
+
+export const shipList = [
+    {
+    kind: string
+    position: number[][] | null[][]
+    orient: string
+    size: number
+    hits: number
+    sunk: boolean
+    playerShip: boolean
+    }
+]

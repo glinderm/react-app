@@ -1,5 +1,6 @@
+
+
 export interface Ship {
-    id: number
     kind: string
     position: number[][] | null[][]
     orient: string
@@ -8,3 +9,4 @@ export interface Ship {
     sunk: boolean
     playerShip: boolean
 }
+

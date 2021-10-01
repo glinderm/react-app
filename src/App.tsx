@@ -9,7 +9,6 @@ import { Ship } from './interfaces/ship';
 
 
 function App() : JSX.Element {
-  const [carrier1, setcarrier1] = useState<Ship>(SHIPS[0]);
 
 
   return (
