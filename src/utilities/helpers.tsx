@@ -8,14 +8,16 @@ export function isBoardFull(squares) {
     return true;
 }
 
-export function calculateWinner(playerShips, cpuShips) {
-  const refArray = [null, null, null, null, null];
-  if (playerShips == refArray) {
-    return "Computer";
-  } else if (cpuShips == refArray) {
-    return "Player";
+export function calculateWinner(hp, subCount) {
+  if (hp === 0) {
+    return "You lose!";
   }
-  return null;
+  else if (subCount === 0) {
+    return "You win!";
+  }
+  else {
+    return null;
+  }
 }
 
 export function placeShipsPlayer() {

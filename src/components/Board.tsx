@@ -8,23 +8,28 @@ import { Restart, isBoardFull, calculateWinner, placeShipsPlayer, placeShipsCPU 
 // import { createBoard } from '../utilities/helpers';
 
 export function Board() {
-    //const [playerShips, setPlayerShips] = useState(Array(5).fill(null));
-    //const [cpuShips, setCpuShips] = useState(Array(5).fill(null));
-    const playerShips = addShips(true);
-    const cpuShips = addShips(false);
     const [squares, setSquares] = useState(Array(100).fill(null));
     const [playerSquares, setPlayerSquares] = useState(Array(100).fill(null));
     const [ isPlayerTurn, setIsPlayerTurn ] = useState(true);
     const nextPlayer = isPlayerTurn ? "X" : "O";
-    const winner = calculateWinner(playerShips, cpuShips);
+    let hp = 5;
+    let subCount = 12;
+    hideObjects();
+    const winner = calculateWinner(hp, subCount);
+    
 
     function renderSquare(i) {
         return (
         <Square
             value={squares[i]}
             onClick={() => {
-            if (squares[i] != null || winner != null) {
+            if (winner != null || squares[i] == "X") {
                 return;
+            }
+            else if (squares[i] == "*") {
+                hp--;
+            } else if (squares[i] == "S") {
+                subCount--;
             }
             const nextSquares = squares.slice();
             nextSquares[i] = nextPlayer;
@@ -35,13 +40,12 @@ export function Board() {
         />
         );
     }
-
     function renderPlayerSquare(i) {
         return (
         <Square
             value={playerSquares[i]}
             onClick={() => {
-            if (shipPlacementPhase != true || winner != null) {
+            if (winner != null) {
                 return;
             }
             const nextPlayerSquares = playerSquares.slice();
@@ -54,14 +58,26 @@ export function Board() {
         );
     }
 
-    function addShips(isPlayer) {
-        if (isPlayer) {
-            placeShipsPlayer();
-        } else {
-            placeShipsCPU();
-            shipPlacementPhase = false;
+    function hideObjects() {
+        const numSubs = 12;
+        const numMines = Math.floor(Math.random() * 10) + 10;
+        const hiddenMap = squares.slice();
+        for (let s = 0; s < numSubs; s++) {
+            const subIndex = Math.floor(Math.random() * 100);
+            if (hiddenMap[subIndex] === null) {
+                hiddenMap[subIndex] = "S";
+            }
+            
         }
+        for (let m = 0; m < numMines; m++) {
+            const mineIndex = Math.floor(Math.random() * 100); 
+            if (hiddenMap[mineIndex] === null) {
+                hiddenMap[mineIndex] = "*";
+            }
+        }
+        setSquares(hiddenMap);
     }
+
 
     function renderRestartButton() {
         return (

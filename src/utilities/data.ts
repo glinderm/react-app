@@ -13,15 +13,3 @@ export const labels = {
     9: 'I',
     10: 'J'
 }
-
-export const shipList = [
-    {
-    kind: string
-    position: number[][] | null[][]
-    orient: string
-    size: number
-    hits: number
-    sunk: boolean
-    playerShip: boolean
-    }
-]
