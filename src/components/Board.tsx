@@ -9,7 +9,7 @@ import { isBoardFull } from '../utilities/helpers';
 export function Board() {
     const [squares, setSquares] = useState(Array(12).fill(null));
     const [ isPlayerTurn, setIsPlayerTurn ] = useState(true);
-    const nextPlayer = isPlayerTurn ? "C" : "P";
+    const nextPlayer = isPlayerTurn ? "Player" : "Computer";
     const winner = calculateWinner(squares);
 
     function renderSquare(i) {
@@ -71,9 +71,9 @@ export function Board() {
                 {renderSquare(8)}
             </div>
             <div className="board-row">
-                {renderSquare(6)}
-                {renderSquare(7)}
-                {renderSquare(8)}
+                {renderSquare(9)}
+                {renderSquare(10)}
+                {renderSquare(11)}
             </div>
             </div>
             <div className="game-info">{getStatus()}</div>
